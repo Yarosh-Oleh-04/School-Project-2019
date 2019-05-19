@@ -1,0 +1,128 @@
+
+body {
+    margin: 0;
+    background-image: url('./images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+p {
+    margin: 0;
+    user-select: none;
+}
+
+.for_b {
+    margin: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    background: radial-gradient(yellow 60%, green);
+}
+
+.info {
+    padding: 15px;  
+    background-color: gray;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.info p {
+    font-size: 50px;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px white, 0 0 15px white;
+}
+
+.info p:last-of-type {
+    font-size: 30px;
+}
+
+.info a {
+    color: yellowgreen;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.content {
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.for_b_2 {
+    padding: 10px;
+    border-radius: 5px;
+    background: radial-gradient(yellow 60%, green);
+    margin-bottom: 50px;
+}
+
+.content .fractal {
+    position: relative;
+    height: max-content;
+}
+
+.content div img:nth-of-type(2) {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+}
+
+
+.content img {
+    width: calc((100vw - 250px)/2);
+}
+
+.content .fractal div img:last-of-type {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 25px; 
+    bottom: 25px;
+    cursor: pointer;
+}
+
+.fractal:hover img:nth-of-type(2) {
+    opacity: 1;
+}
+
+.fractal .i {
+    position: absolute;
+    bottom: 25px;
+    right: 75px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    display: none;
+}
+
+.fractal div:hover .i {
+    display: block;
+}
+
+.by {
+    background-color: rgba(128, 128, 128, 0.5);
+    float: left;
+    padding: 5px;
+    border-top-right-radius: 10px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px white, 0 0 10px white;
+    font-size: 18px;
+}
+
+@media only screen and (min-height: 100vw){
+    .content img {
+        width: calc(100vw - 120px);
+    }    
+}
